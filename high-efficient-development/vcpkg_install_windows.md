@@ -15,8 +15,8 @@ vcpkg是微软官方提供的一款跨平台的C++第三方库管理工具，实
 ### 需求
 
 - Windows 7 或更新的版本
-- [Git][getting-started:git]
-- [Visual Studio 2015][getting-started:visual-studio] 或更新的版本（包含英文语言包）
+- [Git][https://git-scm.com/downloads]
+- [Visual Studio 2015][https://visualstudio.microsoft.com/zh-hans/] 或更新的版本（包含英文语言包）
 
 > 热忱提示：
 >
