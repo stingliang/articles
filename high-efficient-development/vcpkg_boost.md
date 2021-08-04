@@ -4,7 +4,7 @@
 
 有关如何安装vcpkg，请见
 
-- [vcpkg安装及使用(Windows)](../vcpkg_install_windows.md)
+- [vcpkg安装及使用(Windows)](https://github.com/stingliang/articles/blob/main/high-efficient-development/vcpkg_install_windows.md)
 
 ## 题外话：编码洁癖
 
