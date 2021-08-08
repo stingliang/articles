@@ -20,9 +20,9 @@
 
 我的配置如下
 
-![工具链](images/tools-chain.png)
+![工具链](https://minio.wowsting.club/wowstingblog/effective-development/vcpkg/tools-chain.png)
 
-![CMake配置](images/cmake.png)
+![CMake配置](https://minio.wowsting.club/wowstingblog/effective-development/vcpkg/cmake.png)
 
 #### 注意事项
 
