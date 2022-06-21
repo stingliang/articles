@@ -56,20 +56,20 @@ vcpkg是微软官方提供的一款跨平台的C++第三方库管理工具，实
 
 使用以下命令安装您的项目所需要的库
 
-```cmd
+```powershell
 > vcpkg install [packages name]
 # 如果未配置环境变量，请使用绝对/相对路径
 ```
 
 可以使用 `search` 子命令来查找vcpkg中集成的库:
 
-```cmd
+```powershell
 > vcpkg search [search term]
 ```
 
 若希望在全局使用vcpkg，运行以下命令 (首次启动需要管理员权限)
 
-```cmd
+```powershell
 > vcpkg integrate install
 ```
 
@@ -78,7 +78,7 @@ vcpkg是微软官方提供的一款跨平台的C++第三方库管理工具，实
 
 为了在IDE以外在cmake中使用vcpkg，需要使用以下工具链文件:
 
-```cmd
+```powershell
 > cmake -B [build directory] -S . -DCMAKE_TOOLCHAIN_FILE=[path to vcpkg]/scripts/buildsystems/vcpkg.cmake
 > cmake --build [build directory]
 ```

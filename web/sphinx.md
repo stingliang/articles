@@ -2,11 +2,7 @@
 
 参加工作快两年了，也不是第一次使用Sphinx +Python搭建页面，但是因为懒，很多工作中收获的编程技巧和框架都没有沉淀下来，于是现在把在线文档捡起来，将工作中不断实践的技术路线沉淀下来。
 
-有关Sphinx的介绍，还没有了解的话可以自行百度。
-
-- [中文官网](https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html)
-
-- [英文官网](https://www.sphinx-doc.org/)
+有关Sphinx的介绍，还没有了解的话可以自行百度或访问其官方网站：[Sphinx](https://www.sphinx-doc.org/en/master/index.html)。
 
 > 默认环境是搭建在Ubuntu环境下，不熟悉Linux操作的同学请先入门Linux操作
 
@@ -84,3 +80,62 @@ sudo nginx -s reload
 接下来在浏览器中输入`127.0.0.1`就可以看到生成的默认界面了。
 
 ![nginx_default_web](./images/nginx_default_web.png)
+
+### 2.2 安装python依赖
+
+除了为了实现效果更好的文档并使其支持markdown格式文件，需要安装以下模块：
+
+```shell
+sudo python3 -m pip install sphinx sphinx-autobuild recommonmark sphinx-markdown-tables sphinx_copybutton
+```
+
+安装后，修改`source/conf.py`文件，在文件中顶部添加以下代码，导入`AutoStructify`模块：
+
+```python
+from recommonmark.transform import AutoStructify
+```
+
+将默认的extensions选项中，加入以下内容：
+
+```python
+# -- General configuration ---------------------------------------------------
+
+# Add any Sphinx extension module names here, as strings. They can be
+# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
+# ones.
+extensions = [
+    'sphinx_copybutton',
+    'sphinx.ext.mathjax',
+    'sphinx_markdown_tables',
+    'recommonmark'
+]
+```
+
+在文件的最后，加入以下代码，以完成对`.md`文件的支持：
+
+```python
+# The suffix of source filenames.
+source_parsers = {
+	'.md': 'recommonmark.parser.CommonMarkParser',
+}
+source_suffix = ['.rst', '.md']
+```
+
+### 2.3 编辑索引文件
+
+一切就绪后，需要通过`index.rst`文件来组织网页和文章的结构。
+
+`index.rst`文件使用的是一种类似于markdown和html的文本标记语言，对其具体的语法和介绍请参考官网：[reStructuredText Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)。
+
+我的`index.rst`文件如下：
+
+
+
+### 2.4 生成网页
+
+在工程的根目录下，执行以下命令完成网页的生成和部署：
+
+```shell
+make html && sudo cp -r build/html /var/www
+```
+
