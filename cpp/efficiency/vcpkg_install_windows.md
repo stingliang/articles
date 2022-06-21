@@ -28,7 +28,7 @@ vcpkg是微软官方提供的一款跨平台的C++第三方库管理工具，实
 
 ### 获取源码
 
-```cmd
+```powershell
 # 克隆源码
 > git clone https://github.com/microsoft/vcpkg
 # 执行 bootstrap.bat 脚本

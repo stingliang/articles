@@ -4,7 +4,7 @@
 
 有关Sphinx的介绍，还没有了解的话可以自行百度或访问其官方网站：[Sphinx](https://www.sphinx-doc.org/en/master/index.html)。
 
-> 默认环境是搭建在Ubuntu环境下，不熟悉Linux操作的同学请先入门Linux操作
+默认环境是搭建在Ubuntu环境下，不熟悉Linux操作的同学请先入门Linux操作
 
 ## 1 安装 Sphinx
 
@@ -14,7 +14,7 @@
 sudo apt-get install python3-sphinx
 ```
 
-更多安装方式可以参考官方提供的介绍：[Install Sphinx](https://link.jianshu.com/?t=http://www.sphinx-doc.org/en/stable/install.html)。
+更多安装方式可以参考官方提供的介绍：[Install Sphinx](https://www.sphinx-doc.org/en/master/usage/installation.html)。
 
 ## 2 创建工程
 
