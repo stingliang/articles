@@ -48,7 +48,7 @@ int main(int argc, char * argv[])
 编译
 
 ```shell
-g++ -o main main.cpp
+g++ -o main main.docs
 ```
 
 运行结果
