@@ -51,8 +51,8 @@ templates_path = ['_templates']
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-# language = 'zh_CN'
-language = 'en_US'
+language = 'zh_CN'
+# language = 'en_US'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -69,7 +69,13 @@ html_theme = 'alabaster'
 # html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme_options = {'navigation_depth': 3, 'navigation_with_keys': True}
+# html_theme_options = {'navigation_depth': 3, 'navigation_with_keys': True}
+
+html_short_title = "Rui's zone"
+html_favicon = 'images/rui.ico'
+html_show_sphinx = False
+html_copy_source = False
+html_show_sourcelink = False
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
